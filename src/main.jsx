@@ -7,6 +7,7 @@ import { LoginCard } from "./pages/Login";
 import { RegisterCard } from "./pages/register";
 import ErrorPage from "./pages/404";
 import Home from "./pages/home";
+import ProductListCard from "./pages/products";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,11 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <LoginCard />,
-  }
+  },
+  {
+    path: "/products",
+    element: <ProductListCard />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
