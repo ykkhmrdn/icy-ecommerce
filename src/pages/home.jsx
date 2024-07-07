@@ -70,9 +70,11 @@ function Home() {
           </ul>
           <div className="items-center hidden gap-4 lg:flex">
             <Link to="/login">
-            <Button variant="text">Log in</Button>
+              <Button variant="text">Log in</Button>
             </Link>
-            <Button color="gray">buy now</Button>
+            <Link to={"/products"}>
+              <Button color="gray">buy now</Button>
+            </Link>
           </div>
           <IconButton
             variant="text"
@@ -108,8 +110,12 @@ function Home() {
               </NavItem>
             </ul>
             <div className="flex items-center gap-4 mt-6 mb-4">
-              <Button variant="text">Log in</Button>
-              <Button color="gray">buy now</Button>
+              <Link to="/login">
+                <Button variant="text">Log in</Button>
+              </Link>
+              <Link to={"/products"}>
+                <Button color="gray">buy now</Button>
+              </Link>
             </div>
           </div>
         </Collapse>
