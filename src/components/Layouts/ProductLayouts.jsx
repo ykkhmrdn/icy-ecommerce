@@ -2,32 +2,32 @@ import { ProductListCard} from "../Elements/Products/ProductsCard";
 
 const CONTENTS = [
   {
-    img: "/src/assets/img/Nike Dunk.jpg",
+    img: "/assets/img/Nike Dunk.jpg",
     name: "Nike Dunk Low Retro White Black",
     price: "Rp 1,300,000",
   },
   {
-    img: "/src/assets/img/Nike Air Jordan.jpg",
+    img: "/assets/img/Nike Air Jordan.jpg",
     name: "Nike Air Jordan Mid Red Panda",
     price: "Rp 1,800,000",
   },
   {
-    img: "/src/assets/img/Nike Cortez.jpg",
+    img: "/assets/img/Nike Cortez.jpg",
     name: "Nike Cortez Classic Leather",
     price: "Rp 1,600,000",
   },
   {
-    img: "/src/assets/img/Nike Mid Blazer.jpg",
+    img: "/assets/img/Nike Mid Blazer.jpg",
     name: "Nike Blazer Mid '77 Vintage",
     price: "Rp 1,300,000",
   },
   {
-    img: "/src/assets/img/Nike Defy.jpg",
+    img: "/assets/img/Nike Defy.jpg",
     name: "Nike Defy All Day",
     price: "Rp 700,000",
   },
   {
-    img: "/src/assets/img/Nike Air Force.jpg",
+    img: "/assets/img/Nike Air Force.jpg",
     name: "Nike Air Force 1 Triple White",
     price: "Rp 1,350,000",
   },
