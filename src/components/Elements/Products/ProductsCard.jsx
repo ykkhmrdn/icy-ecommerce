@@ -7,8 +7,12 @@ import {
   Button,
 } from "@material-tailwind/react";
 import PropTypes from "prop-types";
+import { useCart } from "../Cart/CartContext";
 
-export function ProductListCard({ img, name, price }) {
+export function ProductListCard({ id, img, name, price }) {
+  const { handleAddToCart } = useCart();
+  const product = { id, img, name, price };
+
   return (
     <Card>
       <CardHeader shadow={false} floated={false} className="h-48">
@@ -24,7 +28,11 @@ export function ProductListCard({ img, name, price }) {
             {name}
           </Typography>
           <Typography className="font-bold text-congress-blue-950">
-            {price}
+            Rp{" "}
+            {price.toLocaleString("id-ID", {
+              style: "currency",
+              currency: "IDR",
+            })}
           </Typography>
         </div>
       </CardBody>
@@ -32,6 +40,7 @@ export function ProductListCard({ img, name, price }) {
         <Button
           ripple={false}
           fullWidth={true}
+          onClick={() => handleAddToCart(product)}
           className="shadow-none bg-blue-gray-900/10 text-blue-gray-900 hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
         >
           Add to Cart
@@ -42,9 +51,10 @@ export function ProductListCard({ img, name, price }) {
 }
 
 ProductListCard.propTypes = {
-  img: PropTypes.node.isRequired,
-  name: PropTypes.node.isRequired,
-  price: PropTypes.node.isRequired,
+  id: PropTypes.number.isRequired,
+  img: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
 };
 
 export default ProductListCard;
