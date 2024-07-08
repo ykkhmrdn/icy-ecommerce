@@ -12,6 +12,13 @@ import {
 } from "@material-tailwind/react";
 
 export function LoginCard() {
+  const handleLogin = (event) => {
+    event.preventDefault();
+    localStorage.setItem('email', event.target.email.value);
+    localStorage.setItem('password', event.target.password.value);
+    window.location.href = '/products';
+  };
+
   return (
     <AuthLayout>
       <Card className="w-96">
@@ -23,19 +30,32 @@ export function LoginCard() {
             Sign In
           </Typography>
         </CardHeader>
-        <CardBody className="flex flex-col gap-4">
-          <Input label="Email" size="lg" autoFocus />
-          <Input label="Password" size="lg" />
-          <div className="-ml-2.5">
-            <Checkbox label="Remember Me" />
-          </div>
-        </CardBody>
-        <CardFooter className="pt-0">
-          <Button fullWidth type="submit" className="bg-congress-blue-950">
-            Sign In
-          </Button>
-          <AuthCardFooter type="login" />
-        </CardFooter>
+        <form onSubmit={handleLogin}>
+          <CardBody className="flex flex-col gap-4">
+            <Input
+              label="Email"
+              type="email"
+              name="email"
+              size="lg"
+              autoFocus
+            />
+            <Input label="Password" type="password" name="password" size="lg" />
+            <div className="-ml-2.5">
+              <Checkbox label="Remember Me" />
+            </div>
+          </CardBody>
+          <CardFooter className="pt-0">
+            <Button
+              fullWidth
+              type="submit"
+              className="bg-congress-blue-950"
+              onClick={() => {}}
+            >
+              Sign In
+            </Button>
+            <AuthCardFooter type="login" />
+          </CardFooter>
+        </form>
       </Card>
     </AuthLayout>
   );
