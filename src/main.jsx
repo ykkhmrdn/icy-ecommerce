@@ -8,6 +8,7 @@ import { RegisterCard } from "./pages/register";
 import ErrorPage from "./pages/404";
 import Home from "./pages/home";
 import ProductListCard from "./pages/products";
+import { CartProvider } from "./components/Elements/Cart/CartContext";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>
-      <RouterProvider router={router} />
+      <CartProvider>
+        <RouterProvider router={router} />
+      </CartProvider>
     </ThemeProvider>
   </React.StrictMode>
 );
