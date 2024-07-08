@@ -6,6 +6,7 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+import PropTypes from "prop-types";
 
 export function ProductListCard({ img, name, price }) {
   return (
@@ -39,5 +40,11 @@ export function ProductListCard({ img, name, price }) {
     </Card>
   );
 }
+
+ProductListCard.propTypes = {
+  img: PropTypes.node.isRequired,
+  name: PropTypes.node.isRequired,
+  price: PropTypes.node.isRequired,
+};
 
 export default ProductListCard;
