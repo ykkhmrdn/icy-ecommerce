@@ -6,9 +6,9 @@ const CartList = () => {
   return (
     <Card>
       <CardBody>
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between gap-8 mb-4">
           <Typography variant="h5" color="blue-gray" className="">
-            Latest Customers
+            Cart List
           </Typography>
           <Typography
             as="a"
