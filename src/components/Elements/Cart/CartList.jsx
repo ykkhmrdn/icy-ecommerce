@@ -1,16 +1,18 @@
 import { Card, CardBody, Typography } from "@material-tailwind/react";
 import { useCart } from "./CartContext";
+import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 
 const CartList = () => {
   const { cart } = useCart();
   return (
     <Card>
-      <CardBody>
+      <CardBody className="w-64">
         <div className="flex items-center justify-between gap-8 mb-4">
-          <Typography variant="h5" color="blue-gray" className="">
+          <Typography variant="h5" color="blue-gray" className="flex gap-2">
+            <ShoppingCartIcon className="w-6 h-6 text-congress-blue-800" />
             Cart List
           </Typography>
-          <Typography
+          {/* <Typography
             as="a"
             href="#"
             variant="small"
@@ -18,7 +20,7 @@ const CartList = () => {
             className="font-bold"
           >
             View all
-          </Typography>
+          </Typography> */}
         </div>
         <div className="divide-y divide-gray-200">
           {cart.map((item) => (
