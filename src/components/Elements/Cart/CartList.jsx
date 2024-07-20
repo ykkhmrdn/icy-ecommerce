@@ -1,6 +1,7 @@
 import { Card, CardBody, Typography } from "@material-tailwind/react";
 import { useCart } from "./CartContext";
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
+import Counter from "../../Fragments/Counter";
 
 const CartList = () => {
   const { cart } = useCart();
@@ -36,9 +37,15 @@ const CartList = () => {
                 >
                   {item.name}
                 </Typography>
-                <Typography className="flex items-center gap-1 text-sm font-medium text-blue-gray-500">
-                  {item.price}
-                </Typography>
+                  <Typography className="flex items-center gap-1 text-sm font-medium text-blue-gray-500">
+                    {" "}
+                    {item.price.toLocaleString("id-ID", {
+                      style: "currency",
+                      currency: "IDR",
+                    })}
+                  </Typography>
+                  <Counter />
+              
               </div>
             </div>
           ))}
