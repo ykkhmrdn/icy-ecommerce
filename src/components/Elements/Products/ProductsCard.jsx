@@ -28,7 +28,7 @@ export function ProductListCard({ id, img, name, price }) {
             {name}
           </Typography>
           <Typography className="font-bold text-congress-blue-950">
-            Rp{" "}
+            {" "}
             {price.toLocaleString("id-ID", {
               style: "currency",
               currency: "IDR",
