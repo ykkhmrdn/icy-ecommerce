@@ -1,6 +1,7 @@
 import { ProductListCard } from "../Elements/Products/ProductsCard";
 import { useCart } from "../Elements/Cart/CartContext";
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const product = [
   {
     id: 1,
